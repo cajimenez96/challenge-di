@@ -4,7 +4,7 @@ import styles from './cards.module.css';
 import { FaUserAlt, FaRocket, FaGlobe, FaVideo, FaTransgenderAlt, FaTruckMonster } from "react-icons/fa";
 import Button from '../Button/Button';
 
-const Card = ({name, model, page}) => {
+const Card = ({name, info, page}) => {
   return (
     <div className={`card ${styles.cardContainer}`}>
       <div className="card-body">
@@ -23,7 +23,7 @@ const Card = ({name, model, page}) => {
           }
           <h5 className="card-title ms-3">{name}</h5>
         </div>
-        <p className="card-text p-2">{model}</p>
+        <p className="card-text p-2">{info}</p>
         <div className="text-end">
           <Link to='/'>
             <Button text={'View'} />

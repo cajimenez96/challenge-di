@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Category from './components/Category/Category';
 import Navbar from './components/Navbar/Navbar';
 import styles from './app.module.css';
-import People from './pages/People/People';
+import ViewElements from './pages/ViewElements/ViewElements';
 
 function App() {
   return (
@@ -15,8 +15,12 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route exact path='/people' element={<People />}>
-            </Route>
+            <Route exact path='/films' element={<ViewElements element="films" />} />
+            <Route exact path='/peoples' element={<ViewElements element="people" />} />
+            <Route exact path='/planets' element={<ViewElements element="planets" />} />
+            <Route exact path='/species' element={<ViewElements element="species" />} />
+            <Route exact path='/starships' element={<ViewElements element="starships" />} />
+            <Route exact path='/vehicles' element={<ViewElements element="vehicles" />} />
           </Routes>
         </main>
       </BrowserRouter>
