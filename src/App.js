@@ -1,19 +1,25 @@
 import React from 'react';
-import Cards from './components/Cards/Cards';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Category from './components/Category/Category';
 import Navbar from './components/Navbar/Navbar';
 import styles from './app.module.css';
+import People from './pages/People/People';
 
 function App() {
   return (
     <>
-      <header className={styles.headerContainer}>
-        <Navbar />
-        <Category />
-      </header>
-      <div className="container-fluid d-flex justify-content-evenly flex-wrap">
-        <Cards />
-      </div>
+      <BrowserRouter>
+        <header className={styles.headerContainer}>
+          <Navbar />
+          <Category />
+        </header>
+        <main>
+          <Routes>
+            <Route exact path='/people' element={<People />}>
+            </Route>
+          </Routes>
+        </main>
+      </BrowserRouter>
     </>
   );
 }
