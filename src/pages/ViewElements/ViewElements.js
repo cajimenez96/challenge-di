@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Button from '../../components/Button/Button';
 import List from '../../components/List/List';
 import Spinner from '../../components/Spinner/Spinner';
-// import { clientAxios } from '../../config/clientAxios';
 
 const ViewElements = ({element}) => {
   const [listElements, setListElements] = useState();

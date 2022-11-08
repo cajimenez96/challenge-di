@@ -8,6 +8,10 @@
   font-size: 25px;
 }
 
+.titleNavbar:hover {
+  color: #F2CB05;
+}
+
 @media (max-width: 991px) {
   .collapseForm {
     margin: 20px;
