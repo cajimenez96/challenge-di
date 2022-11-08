@@ -1,0 +1,10 @@
+.linkCategory {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #F2F2F2;
+}
+
+.linkCategory:hover {
+  color: #F2CB05;
+}
