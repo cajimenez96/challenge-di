@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './cards.module.css';
 import { FaUserAlt, FaRocket, FaGlobe, FaVideo, FaTransgenderAlt, FaTruckMonster } from "react-icons/fa";
 
@@ -23,7 +24,7 @@ const Cards = ({name, model, page}) => {
         </div>
         <p className="card-text p-2">{model}</p>
         <div className="text-end">
-          <a href='/' className="btn btn-secondary">View more</a>
+          <Link to='/' className="btn btn-secondary">View more</Link>
         </div>
       </div>
     </div>
