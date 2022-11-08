@@ -1,25 +1,26 @@
-import React from 'react'
+import React from 'react';
+import styles from './category.module.css';
 
 const Category = () => {
   return (
     <ul className="nav justify-content-center">
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="#">Films</a>
+        <a className={`nav-link ${styles.linkCategory}`} aria-current="page" href="#">Films</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">People</a>
+        <a className={`nav-link ${styles.linkCategory}`} href="#">People</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Planets</a>
+        <a className={`nav-link ${styles.linkCategory}`} href="#">Planets</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Species</a>
+        <a className={`nav-link ${styles.linkCategory}`} href="#">Species</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Starships</a>
+        <a className={`nav-link ${styles.linkCategory}`} href="#">Starships</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Vehicles</a>
+        <a className={`nav-link ${styles.linkCategory}`} href="#">Vehicles</a>
       </li>
     </ul>
   )

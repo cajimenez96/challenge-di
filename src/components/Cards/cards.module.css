@@ -1,0 +1,10 @@
+.cardContainer {
+  width: 30rem;
+  margin: 20px;
+  transition: all .1s ease-in;
+  border-color: #0d0d0d5d;
+}
+
+.cardContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
