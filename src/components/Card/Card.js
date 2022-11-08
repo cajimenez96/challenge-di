@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './cards.module.css';
 import { FaUserAlt, FaRocket, FaGlobe, FaVideo, FaTransgenderAlt, FaTruckMonster } from "react-icons/fa";
+import Button from '../Button/Button';
 
-const Cards = ({name, model, page}) => {
+const Card = ({name, model, page}) => {
   return (
     <div className={`card ${styles.cardContainer}`}>
       <div className="card-body">
@@ -24,11 +25,13 @@ const Cards = ({name, model, page}) => {
         </div>
         <p className="card-text p-2">{model}</p>
         <div className="text-end">
-          <Link to='/' className="btn btn-secondary">View more</Link>
+          <Link to='/'>
+            <Button text={'View'} />
+          </Link>
         </div>
       </div>
     </div>
   )
 }
 
-export default Cards
+export default Card;
