@@ -9,7 +9,7 @@ const Category = () => {
         <Link className={`nav-link ${styles.linkCategory}`} aria-current="page" to="/films">Films</Link>
       </li>
       <li className="nav-item">
-        <Link className={`nav-link ${styles.linkCategory}`} to="/people">People</Link>
+        <Link className={`nav-link ${styles.linkCategory}`} to="/peoples">People</Link>
       </li>
       <li className="nav-item">
         <Link className={`nav-link ${styles.linkCategory}`} to="/planets">Planets</Link>

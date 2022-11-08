@@ -3,7 +3,9 @@ import styles from './spinner.module.css';
 
 const Spinner = ({status}) => {
   return (
-    <div className={!status && styles.viewSpinner}>
+    <div
+      className= {!status ? styles.viewSpinner : undefined}
+    >
       <div className="spinner-border text-warning">
         <span className="visually-hidden">Loading...</span>
       </div>
