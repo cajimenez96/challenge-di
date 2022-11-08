@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${styles.containerNav}`}>
       <div className="container-fluid mt-0">
-        <h2 className={styles.titleNavbar} href="#">The Star Wars API</h2>
+        <Link className={styles.titleNavbar} to="/">The Star Wars API</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
