@@ -26,6 +26,7 @@ const DetailFilm = () => {
     ? <div className="container p-lg-5">
         <h3 className={styles.title}>{film.title}</h3>
         <div className={styles.containerActor}>
+          <p className={styles.info}>Episode ID: {film.episode_id}</p>
           <p className={styles.info}>Director: {film.director}</p>
           <p className={styles.info}>Producer: {film.producer}</p>
           <p className={styles.info}>Release date: {film.release_date}</p>
