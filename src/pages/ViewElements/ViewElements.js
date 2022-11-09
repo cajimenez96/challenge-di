@@ -1,36 +1,29 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Button from '../../components/Button/Button';
 import List from '../../components/List/List';
 import Spinner from '../../components/Spinner/Spinner';
+import { baseUrl } from '../../constant';
+import getData from '../../utils/getData';
 
 const ViewElements = ({element}) => {
   const [listElements, setListElements] = useState();
   const [page, setPage] = useState();
   const [loading, setLoading] = useState();
 
-  let baseUrl = process.env.REACT_APP_SWAPI_API_URL+element;
-
-  const getNewData = (baseUrl) => {
+  const getNewData = async () => {
     setLoading(true);
     setListElements();
-    axios.get(baseUrl)
-    .then(response => {
-      setListElements(response.data.results);
-      setPage(response.data.next);
-      setLoading(false);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-    .finally(() => setLoading(!loading))
+    const dataResult = await getData(baseUrl+element);
+    setListElements(dataResult.results);
+    setPage(dataResult.next);
+    setLoading(false);
   };
 
   useEffect(() => {
-    const getData = () => {
-      getNewData(baseUrl);
+    const refetch = async () => {
+      await getNewData(baseUrl);
     }
-    getData();
+    refetch();
   }, [element]);
 
   const handleAddActors = async () => {

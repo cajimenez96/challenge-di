@@ -8,12 +8,12 @@ const List = ({list, page}) => {
           page === 'films'
         ?  list.map((films, index) => {
             return (
-              <Card name={films.title} info={films.opening_crawl} page={page} key={index}/>
+              <Card url={films.url} name={films.title} info={films.opening_crawl} page={page} key={index}/>
             );
           })
         : list.map((element, index) => {
             return (
-              <Card name={element.name} page={page} key={index}/>
+              <Card url={element.url} name={element.name} info={element.model} page={page} key={index}/>
             )
           })
       }
