@@ -56,11 +56,9 @@ const DetailElement = ({element}) => {
         setActors(dataActors);
       } else {
         setListElements(starshipsVehicleList);
+        const dataFilms = await getList(dataElement.films);
+        setFilms(dataFilms);
       }
-
-      const dataFilms = await getList(dataElement.films);
-      setFilms(dataFilms);
-
       setDataIsLoading(false);
       setLoading(false);
     }
