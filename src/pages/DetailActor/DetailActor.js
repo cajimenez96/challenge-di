@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import getList from '../../logic/getList';
 import { useParams } from 'react-router';
 import Spinner from '../../components/Spinner/Spinner';
-import styles from './detailActor.module.css';
 import getData from '../../utils/getData';
 import { baseUrl } from '../../constant';
+import DetailList from '../../components/DetailList/DetailList';
+import { starshipsList, filmsList } from '../../data';
+import styles from './detailActor.module.css';
+
 
 const DetailActor = () => {
   const {id} = useParams();
@@ -51,22 +54,7 @@ const DetailActor = () => {
             ?
               <>
                 <h3 className={styles.title}>Starships</h3>
-                {
-                  <div className="d-flex justify-content-evenly">
-                    {
-                      starships.map((starship, index) => {
-                        return (
-                          <div className={`${styles.containerActor}`} key={index}>
-                            <p className={`fs-5 ${styles.info}`}>Name: {starship.name}</p>
-                            <p className={`fs-5 ${styles.info}`}>Model: {starship.model}</p>
-                            <p className={`fs-5 ${styles.info}`}>Manufacturer: {starship.manufacturer}</p>
-                            <p className={`fs-5 ${styles.info}`}>Class: {starship.starship_class}</p>
-                          </div>
-                        )
-                      })
-                    }
-                  </div>
-                }
+                <DetailList list={starships} names={starshipsList} />
               </>
             :
               <div className="d-flex justify-content-center align-items-center">
@@ -80,21 +68,7 @@ const DetailActor = () => {
             ?
               <>
                 <h3 className={styles.title}>Films</h3>
-                {
-                  <div className="d-flex justify-content-evenly">
-                    {
-                      films.map((film, index) => {
-                        return (
-                          <div className={`${styles.containerActor}`} key={index}>
-                            <p className={`fs-5 ${styles.info}`}>Title: {film.title}</p>
-                            <p className={`fs-5 ${styles.info}`}>Director: {film.director}</p>
-                            <p className={`fs-5 ${styles.info}`}>Release date: {film.release_date}</p>
-                          </div>
-                        )
-                      })
-                    }
-                  </div>
-                }
+                <DetailList list={films} names={filmsList} />
               </>
             :
               <div className="d-flex justify-content-center align-items-center">

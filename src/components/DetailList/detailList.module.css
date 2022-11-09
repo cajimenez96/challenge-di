@@ -1,0 +1,18 @@
+.containerDetail {
+  list-style: none;
+  padding: 10px;
+  color: var(--color-font-secondary);
+  background-color: var(--background-color);
+}
+
+.containerInfo {
+  padding: 10px;
+  margin: var(--spacing-20);
+  width: 400px;
+}
+
+.info {
+  display: flex;
+  font-size: 22px;
+  border-bottom: 1px solid var(--color-font-primary) 
+}
