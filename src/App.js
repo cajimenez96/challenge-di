@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Category from './components/Category/Category';
 import Navbar from './components/Navbar/Navbar';
-import styles from './app.module.css';
+import './App.css';
 import ViewElements from './pages/ViewElements/ViewElements';
 import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <>
+    <div className="appContainer">
       <BrowserRouter>
-        <header className={styles.headerContainer}>
+        <header className="headerContainer">
           <Navbar />
           <Category />
         </header>
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </main>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

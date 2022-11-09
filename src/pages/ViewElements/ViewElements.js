@@ -50,7 +50,7 @@ const ViewElements = ({element}) => {
         ? <>
             <List list={listElements} page={element} />
             {
-              <div className="text-end w-75">
+              <div className="text-center pb-4">
                 {listElements.length === 10
                 ? (
                   <Button click={handleAddActors} text={'View more'}/>

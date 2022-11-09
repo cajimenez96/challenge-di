@@ -7,8 +7,8 @@ import Button from '../Button/Button';
 const Card = ({name, info, page}) => {
   return (
     <div className={`card ${styles.cardContainer}`}>
-      <div className="card-body">
-        <div className="d-flex align-items-center">
+      <div className={`card-body ${styles.cardBody}`}>
+        <div className={`d-flex ${styles.cardTitle}`}>
           { page === 'films'
            ? <FaVideo />
            : page === 'people'
@@ -23,7 +23,7 @@ const Card = ({name, info, page}) => {
           }
           <h5 className="card-title ms-3">{name}</h5>
         </div>
-        <p className="card-text p-2">{info}</p>
+        <p className={`card-text ${styles.cardText}`}>{info}</p>
         <div className="text-end">
           <Link to='/'>
             <Button text={'View'} />
