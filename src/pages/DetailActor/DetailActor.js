@@ -26,10 +26,8 @@ const DetailActor = () => {
       setDataIsLoading(false)
       setLoading(false);
     };
-    getActor();;
+    getActor();
   },[])
-
-  console.log(films)
 
     return (
     actor
