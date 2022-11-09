@@ -4,8 +4,7 @@ import Category from './components/Category/Category';
 import Navbar from './components/Navbar/Navbar';
 import ViewElements from './pages/ViewElements/ViewElements';
 import Home from './pages/Home/Home';
-import DetailActor from './pages/DetailActor/DetailActor';
-import DetailFilm from './pages/DetailFilm/DetailFilm';
+import DetailElement from './pages/DetailElement/DetailElement';
 import './App.css';
 
 function App() {
@@ -26,9 +25,13 @@ function App() {
             <Route exact path='/starships' element={<ViewElements element="starships" />} />
             <Route exact path='/vehicles' element={<ViewElements element="vehicles" />} />
 
-            <Route exact path='/people/:id' element={<DetailActor />} />
-            <Route exact path='/films/:id' element={<DetailFilm />} />
-
+            <Route exact path='/people/:id' element={<DetailElement element={'people/'}  />} />
+            <Route exact path='/films/:id' element={<DetailElement element={'films/'}  />} />
+            <Route exact path='/planets/:id' element={<DetailElement element={'planets/'} />} />
+            <Route exact path='/species/:id' element={<DetailElement element={'species/'} />} />
+            <Route exact path='/starships/:id' element={<DetailElement element={'starships/'} />} />
+            <Route exact path='/vehicles/:id' element={<DetailElement element={'vehicles/'} />} />
+            
           </Routes>
         </main>
       </BrowserRouter>
