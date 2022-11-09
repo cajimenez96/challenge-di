@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import ViewElements from './pages/ViewElements/ViewElements';
 import Home from './pages/Home/Home';
 import DetailActor from './pages/DetailActor/DetailActor';
+import DetailFilm from './pages/DetailFilm/DetailFilm';
 import './App.css';
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
             <Route exact path='/vehicles' element={<ViewElements element="vehicles" />} />
 
             <Route exact path='/people/:id' element={<DetailActor />} />
+            <Route exact path='/films/:id' element={<DetailFilm />} />
+
           </Routes>
         </main>
       </BrowserRouter>
