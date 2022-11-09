@@ -2,9 +2,10 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Category from './components/Category/Category';
 import Navbar from './components/Navbar/Navbar';
-import './App.css';
 import ViewElements from './pages/ViewElements/ViewElements';
 import Home from './pages/Home/Home';
+import DetailActor from './pages/DetailActor/DetailActor';
+import './App.css';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route exact path='/species' element={<ViewElements element="species" />} />
             <Route exact path='/starships' element={<ViewElements element="starships" />} />
             <Route exact path='/vehicles' element={<ViewElements element="vehicles" />} />
+
+            <Route exact path='/people/:id' element={<DetailActor />} />
           </Routes>
         </main>
       </BrowserRouter>
