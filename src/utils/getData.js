@@ -6,7 +6,7 @@ const getData = async (url) => {
     const result = await res.data
     return result
   } catch (err) {
-    if (axios.isCancel(err)) console.log('axios cancel');
+    if (axios.isCancel(err)) console.log('Failed to connect to server');
     else console.log(err);
   }
 }

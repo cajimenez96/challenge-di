@@ -1,0 +1,22 @@
+.containerDetail {
+  padding-bottom: var(--spacing-20);
+}
+
+.title {
+  margin: var(--spacing-20) 0;
+  color: var(--color-font-secondary);
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.containerItem {
+  padding: var(--spacing-20);
+  color: var(--color-font-secondary);
+  background-color: var(--background-color);
+}
+
+.info {
+  border-bottom: 1px solid var(--color-font-primary); 
+  font-size: 25px;
+  color: var(--color-font-secondary);
+}
