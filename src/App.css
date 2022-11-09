@@ -1,0 +1,33 @@
+:root {
+  --background-color: #0d0d0d93;
+  --boxShadow-color-white: rgba(237,236,236,0.75);
+  --boxShadow-color-dark: rgba(0, 0, 0, 0.25);
+  --color-font-primary: #F2CB05;
+  --color-font-primary-hover: #F2B705;
+  --color-font-secondary: #F2F2F2;
+  --border-btn-color: #F2F2F2;
+  --border-btn-color-secondary: #F2CB05;
+
+  --spacing-20: 1.25rem;
+}
+
+@font-face {
+  font-family: "Stars";
+  src: url("./fonts/star.woff") format("woff");
+}
+
+body {
+  font-family: Stars, sans-serif;
+}
+
+.appContainer {
+  min-height: 100vh;
+  background-image: url('./assets/images/bgPage.jpg');
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.headerContainer {
+  background-color: var(--background-color);
+}

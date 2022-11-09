@@ -1,9 +1,13 @@
 .btnDark {
-  background-color: #0D0D0D;
-  color: #F2F2F2;
+  letter-spacing: 1px;
+  padding: 5px var(--spacing-20);
+  background-color: var(--background-color);
+  color: var(--color-font-secondary);
+  text-transform: uppercase;
 }
 
 .btnDark:hover {
-  background-color: #0D0D0D;
-  color: #F2CB05;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-btn-color-secondary);
+  color: var(--color-font-primary);
 }

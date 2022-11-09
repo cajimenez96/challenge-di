@@ -1,10 +1,21 @@
 .linkCategory {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: 1px;
-  color: #F2F2F2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-font-secondary);
 }
 
 .linkCategory:hover {
-  color: #F2CB05;
+  color: var(--color-font-primary);
+}
+
+.linkCategory:focus {
+  color: var(--color-font-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .linkCategory {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
 }

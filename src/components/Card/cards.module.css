@@ -1,11 +1,16 @@
 .cardContainer {
   width: 75vw;
-  margin: 20px;
+  margin: var(--spacing-20);
   transition: all .1s ease-in;
   border-radius: 5px;
-  border-color: #0d0d0d5d;
+  background-color: var(--background-color);
 }
 
 .cardContainer:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: var(--boxShadow-color-white) 0px 3px 20px;
+}
+
+.cardTitle, .cardText, .cardIcon {
+  padding: 0 var(--spacing-20);
+  color: var(--color-font-secondary);
 }
