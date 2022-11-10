@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //React icons
 import { FaAlignJustify } from "react-icons/fa";
+//Component
+import FormSearch from '../FormSearch/FormSearch';
 //Image logo
 import logo from '../../assets/images/logo.png';
 //Styles module
@@ -19,10 +21,7 @@ const Navbar = () => {
           <FaAlignJustify className={styles.navbarTogglerIcon} />
         </button>
         <div className={`collapse navbar-collapse ${styles.collapseForm}`} id="navbarSearch">
-          <form className="d-flex ms-auto mt-0 mt-sm-2 w-auto" role="search">
-            <input className="form-control me-2 w-100" type="search" placeholder="Planets, Spaceships, Vehicles, People, Films or Species" aria-label="Search" />
-            <button className="btn btn-outline-primary" type="submit">Search</button>
-          </form>
+          <FormSearch />
         </div>
       </div>
     </nav>
