@@ -1,10 +1,13 @@
 import React from 'react';
+//React router dom
 import { Link } from 'react-router-dom';
+//Styles module
 import styles from './category.module.css';
 
 const Category = () => {
   return (
     <ul className="nav justify-content-center">
+      {/* Render list of data from API */}
       <li className="nav-item">
         <Link className={`nav-link ${styles.linkCategory}`} aria-current="page" to="/films">Films</Link>
       </li>

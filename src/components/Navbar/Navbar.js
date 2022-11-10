@@ -1,8 +1,12 @@
 import React from 'react';
+//React router dom
 import { Link } from 'react-router-dom';
-import styles from './navbar.module.css';
+//React icons
 import { FaAlignJustify } from "react-icons/fa";
+//Image logo
 import logo from '../../assets/images/logo.png';
+//Styles module
+import styles from './navbar.module.css';
 
 const Navbar = () => {
   return (
