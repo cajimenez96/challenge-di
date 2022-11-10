@@ -2,9 +2,12 @@ import React from 'react'
 import Card from '../Card/Card'
 
 const List = ({list, page}) => {
+  // list -> list of elements 
+  //page -> page of elements
   return (
     <div className="d-flex justify-content-center flex-wrap">
-      { list && page &&
+      { //Render elements separating the films from the rest
+        list && page &&
           page === 'films'
         ?  list.map((films, index) => {
             return (

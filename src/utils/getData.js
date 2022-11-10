@@ -1,5 +1,5 @@
 import axios from "axios";
-
+//Conection to API
 const getData = async (url) => {
   try {
     const res = await axios.get(url)
