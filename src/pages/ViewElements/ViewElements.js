@@ -7,6 +7,7 @@ import List from '../../components/List/List';
 import Spinner from '../../components/Spinner/Spinner';
 //Base URL of API
 import { baseUrl } from '../../constant';
+import Alert from '../../components/Alert/Alert';
 
 const ViewElements = ({element}) => {
   //State of elements
@@ -15,21 +16,27 @@ const ViewElements = ({element}) => {
   const [page, setPage] = useState();
   //State of spinner
   const [loading, setLoading] = useState();
+  //State of error get API
+  const [error, setError] = useState();
 
   //Function to obtain data from API
-  const getNewData = async () => {
+  const getNewData = async (page) => {
     setLoading(true);
     setListElements();
-    const dataResult = await getData(baseUrl+element);
-    setListElements(dataResult.results);
-    setPage(dataResult.next);
+    const dataResult = await getData(page ? page : baseUrl+element);
+    if(dataResult.status) {
+      setError(dataResult);
+    } else {
+      setListElements(dataResult.results);
+      setPage(dataResult.next);
+    }
     setLoading(false);
   };
 
   //Hook to obtain new data page from API
   useEffect(() => {
     const refetch = async () => {
-      await getNewData(baseUrl);
+      await getNewData();
     }
     refetch();
   }, [element]);
@@ -42,14 +49,19 @@ const ViewElements = ({element}) => {
   }
   //Function to get the next data page
   const handleScrollTop = () => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   return (
-    <>
+    error
+    //Failed conection to API
+    ? <Alert message={error.message} />
+    //Conection to API
+    :<>
       {//Render list of elements
         listElements
         ? <>
+        
             <List list={listElements} page={element} />
             {
               <div className="text-center pb-4">
