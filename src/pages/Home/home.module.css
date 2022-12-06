@@ -8,11 +8,11 @@
   width: 100%;
 }
 
+.info {
+  font-size: 200%;
+}
+
 .title {
   text-transform: uppercase;
   font-size: 500%;
-}
-
-.info {
-  font-size: 200%;
 }
