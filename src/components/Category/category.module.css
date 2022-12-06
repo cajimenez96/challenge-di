@@ -6,12 +6,12 @@
   color: var(--color-font-secondary);
 }
 
-.linkCategory:hover {
-  color: var(--color-font-primary);
-}
-
 .linkCategory:focus {
   color: var(--color-font-primary-hover);
+}
+
+.linkCategory:hover {
+  color: var(--color-font-primary);
 }
 
 @media (max-width: 768px) {
