@@ -1,18 +1,27 @@
 .containerHome {
   height: 70vh;
+  width: 50%;
+  text-align: center;
 }
 
 .containerHero {
   color: var(--color-font-secondary);
   text-shadow: -2px -2px 0 var(--boxShadow-color-dark), 2px -2px 0 var(--boxShadow-color-dark), -2px 2px 0 var(--boxShadow-color-dark), 2px 2px 0 var(--boxShadow-color-dark);
-  width: 100%;
 }
 
 .info {
+  text-align: center;
   font-size: 200%;
 }
 
 .title {
+  text-align: center;
   text-transform: uppercase;
   font-size: 500%;
+}
+
+@media (max-width: 992px) {
+  .containerHome {
+    width: 100%;
+  }
 }

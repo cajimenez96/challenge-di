@@ -5,9 +5,11 @@ const Home = ({title, info}) => {
   //Render the Home component showing the props
   return (
     <div className={`d-flex justify-content-center align-items-center ${styles.containerHome}`}>
-      <div className={`text-center ${styles.containerHero}`}>
+      <div className={`${styles.containerHero}`}>
         <span className={styles.title}>{title}</span>
-        <p className={`p-3 ${styles.info}`}>{info}</p>
+        <div className="ms-auto">
+          <p className={`${styles.info}`}>{info}</p>
+        </div>
       </div>
     </div>
   )

@@ -22,10 +22,8 @@ body {
 
 .appContainer {
   min-height: 100vh;
-  background-image: url('./assets/images/bgPage.jpg');
-  background-position: fixed;
+  background: url('./assets/images/bgPage.jpg') fixed;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .headerContainer {
