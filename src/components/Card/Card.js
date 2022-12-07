@@ -2,7 +2,7 @@ import React from 'react';
 //React router dom
 import { Link } from 'react-router-dom';
 //React icons
-import { FaUserAlt, FaRocket, FaGlobe, FaVideo, FaTransgenderAlt, FaTruckMonster } from "react-icons/fa";
+import { FaUserAlt as People, FaRocket as Starships, FaGlobe as Planets, FaVideo as Films, FaTransgenderAlt as Species, FaTruckMonster as Vehicles } from "react-icons/fa";
 //Component
 import Button from '../Button/Button';
 //Styles module
@@ -13,22 +13,32 @@ const Card = ({url, name, info, page}) => {
   //name -> name of element
   //info -> info of element
   //page -> params of page
+
+  //Render icon function
+  const renderIcon = () => {
+    switch (page) {
+      case 'people':
+        return <People />;
+      case'starships':
+        return <Starships />;
+      case 'planets':
+        return <Planets />;
+      case 'films':
+        return <Films />;
+      case'species':
+        return <Species />;
+      default:
+         return <Vehicles />;
+    }
+  }
+
+
   return (
     <div className={`card ${styles.cardContainer}`}>
       <div className={`card-body ${styles.cardBody}`}>
         <div className={`d-flex ${styles.cardTitle}`}>
           {//Render icons
-            page === 'films'
-            ? <FaVideo />
-            : page === 'people'
-              ? <FaUserAlt />
-              : page === 'planets'
-                ? <FaGlobe />
-                : page === 'species'
-                  ? <FaTransgenderAlt />
-                  : page === 'starships'
-                    ? <FaRocket />
-                    : <FaTruckMonster />
+            renderIcon()
           }
           <h5 className="card-title ms-3">{name}</h5>
         </div>
