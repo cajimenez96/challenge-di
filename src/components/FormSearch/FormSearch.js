@@ -6,6 +6,15 @@ import Button from '../Button/Button';
 //Styles module
 import styles from './formSearch.module.css';
 
+//Array of elements to API
+const allElements = [
+  "planets",
+  "starships",
+  "vehicles",
+  "peoples",
+  "films",
+  "species"
+];
 
 const FormSearch = () => {
   //Initialize hook
@@ -13,9 +22,9 @@ const FormSearch = () => {
 
   const handleSearch = () => {
     //Get input value
-    const element = document.getElementById("search").value;
+    const element = document.getElementById("search").value.toLowerCase();
     //Compare results
-    if (element === 'planets' || element === 'starships' || element === 'vehicles' || element === 'peoples' || element === 'films' || element === 'species'){
+    if (allElements.includes(element)){
       //Redirect to url
       navigate(`/${element}`);
     } else {
