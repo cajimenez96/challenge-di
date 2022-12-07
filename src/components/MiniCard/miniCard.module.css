@@ -1,0 +1,6 @@
+.title {
+  margin: var(--spacing-20) 0;
+  color: var(--color-font-secondary);
+  text-transform: uppercase;
+  background-color: transparent;
+}

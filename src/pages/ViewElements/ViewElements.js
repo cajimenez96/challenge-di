@@ -24,6 +24,7 @@ const ViewElements = ({element}) => {
     setLoading(true);
     setListElements();
     const dataResult = await getData(page ? page : baseUrl+element);
+    //Check status of connection
     if(dataResult.status) {
       setError(dataResult);
     } else {
